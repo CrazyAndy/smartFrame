@@ -55,5 +55,6 @@
         </configuration>
       </plugin>
     </plugins>
+      <finalName>chapter1</finalName>
   </build>
 </project>
