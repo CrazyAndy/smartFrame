@@ -35,7 +35,7 @@ public final class ControllerHelper {
                                     String requestPath = array[1];
                                     Request request = new Request(requestMethod,requestPath);
                                     Handler handler = new Handler(controllerClass,method);
-
+                                    ACTION_MAP.put(request,handler);
                                 }
                             }
                         }
@@ -43,5 +43,12 @@ public final class ControllerHelper {
                 }
             }
         }
+    }
+    /**
+     * 获取handler
+     */
+    public static Handler getHandler(String requestMethod,String requestPath){
+        Request request = new Request(requestMethod,requestPath);
+        return ACTION_MAP.get(request);
     }
 }
