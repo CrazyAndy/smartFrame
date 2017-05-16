@@ -55,6 +55,10 @@ public final class DatabaseHelper {
         }
     }
 
+    public static BasicDataSource getDataSource() {
+        return DATA_SOURCE;
+    }
+
     public static void beginTransaction(){
         Connection conn = getConnection();
         if(conn != null){

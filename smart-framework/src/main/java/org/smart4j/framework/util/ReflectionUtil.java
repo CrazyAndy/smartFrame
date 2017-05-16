@@ -25,6 +25,16 @@ public final class ReflectionUtil {
         }
         return instance;
     }
+    public static Object newInstance(String className){
+        Object instance;
+        try {
+            instance = Class.forName(className);
+        } catch (Exception e) {
+            LOGGER.error("new instance failure",e);
+            throw new RuntimeException(e);
+        }
+        return instance;
+    }
     public static Object invokeMethod(Object obj,Method method,Object... args){
         Object result;
         try {
