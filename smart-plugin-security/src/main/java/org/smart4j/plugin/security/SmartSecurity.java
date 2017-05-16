@@ -17,6 +17,8 @@ import java.util.Set;
  */
 public interface SmartSecurity {
 
+
+
     /**
      * 根据用户名获取密码
      *
